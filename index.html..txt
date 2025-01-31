@@ -1,0 +1,82 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Farooq Minerals - AI Gemstone Store</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <h1>Farooq Minerals</h1>
+      <p>AI-Powered Gemstone Store</p>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#products">Products</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="home" class="hero">
+    <h2>Discover Rare and Beautiful Gemstones</h2>
+    <p>Powered by AI for a seamless shopping experience.</p>
+    <a href="#products" class="btn">Shop Now</a>
+  </section>
+
+  <section id="products" class="products">
+    <h2>Our Gemstones</h2>
+    <div class="product-grid">
+      <div class="product-card">
+        <img src="emerald.jpg" alt="Emerald">
+        <h3>Emerald</h3>
+        <p>$500</p>
+        <button class="btn">Add to Cart</button>
+      </div>
+      <div class="product-card">
+        <img src="sapphire.jpg" alt="Sapphire">
+        <h3>Sapphire</h3>
+        <p>$700</p>
+        <button class="btn">Add to Cart</button>
+      </div>
+      <div class="product-card">
+        <img src="ruby.jpg" alt="Ruby">
+        <h3>Ruby</h3>
+        <p>$600</p>
+        <button class="btn">Add to Cart</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>Contact Us</h2>
+    <form id="contact-form">
+      <input type="text" id="name" placeholder="Your Name" required>
+      <input type="email" id="email" placeholder="Your Email" required>
+      <textarea id="message" placeholder="Your Message" required></textarea>
+      <button type="submit" class="btn">Send Message</button>
+    </form>
+  </section>
+
+  <!-- AI Chatbot -->
+  <div id="chatbot">
+    <div id="chatbot-header">
+      <h3>AI Chatbot</h3>
+      <button id="chatbot-close">×</button>
+    </div>
+    <div id="chatbot-body">
+      <div id="chatbot-messages"></div>
+      <input type="text" id="chatbot-input" placeholder="Ask me anything...">
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Farooq Minerals. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
