@@ -1,0 +1,59 @@
+﻿// script.js
+// Contact Form Submission
+document.getElementById('contact-form').addEventListener('submit', function (e) {
+  e.preventDefault();
+  const name = document.getElementById('name').value;
+  const email = document.getElementById('email').value;
+  const message = document.getElementById('message').value;
+
+  if (name && email && message) {
+    alert('Thank you for contacting us! We will get back to you soon.');
+    document.getElementById('contact-form').reset();
+  } else {
+    alert('Please fill out all fields.');
+  }
+});
+
+// AI Chatbot
+const chatbot = document.getElementById('chatbot');
+const chatbotMessages = document.getElementById('chatbot-messages');
+const chatbotInput = document.getElementById('chatbot-input');
+const chatbotClose = document.getElementById('chatbot-close');
+
+// Simple AI Responses
+const aiResponses = [
+  "Hello! How can I assist you today?",
+  "We have a wide range of gemstones. What are you looking for?",
+  "Feel free to ask any questions about our products.",
+  "Thank you for visiting Farooq Minerals!"
+];
+
+// Display AI Message
+function displayAIMessage(message) {
+  const messageElement = document.createElement('div');
+  messageElement.textContent = `AI: ${message}`;
+  chatbotMessages.appendChild(messageElement);
+  chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
+}
+
+// User Input
+chatbotInput.addEventListener('keypress', function (e) {
+  if (e.key === 'Enter') {
+    const userMessage = chatbotInput.value;
+    const userMessageElement = document.createElement('div');
+    userMessageElement.textContent = `You: ${userMessage}`;
+    chatbotMessages.appendChild(userMessageElement);
+    chatbotInput.value = '';
+
+    // Simulate AI Response
+    setTimeout(() => {
+      const randomResponse = aiResponses[Math.floor(Math.random() * aiResponses.length)];
+      displayAIMessage(randomResponse);
+    }, 1000);
+  }
+});
+
+// Close Chatbot
+chatbotClose.addEventListener('click', function () {
+  chatbot.style.display = 'none';
+});
